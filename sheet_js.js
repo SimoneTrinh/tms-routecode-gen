@@ -20,7 +20,7 @@ const jsonData = [
   { name: "Medium", code: "medium_code", author: "Pagorn" },
 ];
 
-const workSheet2 = XLSX.utils.aoa_to_sheet(aoaData);
+const workSheet2 = XLSX.utils.json_to_sheet(jsonData);
 const workBook2 = XLSX.utils.book_new();
 XLSX.utils.book_append_sheet(workBook2, workSheet2, "Sheet 1");
 XLSX.writeFile(workBook, "./temp/sample2.xlsx");
